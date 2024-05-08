@@ -5,7 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Header(){
     const {user,dispatch}=useAuthContext()
     const handleLogout=()=>{
-        localStorage.clear()
+        if (typeof window !== 'undefined') {
+            localStorage.clear()
+        }
         dispatch({type:"LOGOUT"})
     }
     return(<div className="header-container">

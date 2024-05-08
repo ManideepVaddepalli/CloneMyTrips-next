@@ -27,7 +27,9 @@ export default function Page() {
       dispatch({type:'LOGIN',payload:data})
     }
     //storing login info to local storage --- can be hashed using bcrypt if any importatnt info
-    localStorage.setItem("user",JSON.stringify(datavar))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("user",JSON.stringify(datavar))
+  }
     //if user logged pusing to homepage
     if(datavar){
         router.push("/")

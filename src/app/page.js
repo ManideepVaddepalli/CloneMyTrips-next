@@ -2,7 +2,6 @@
 import React from "react";
 import "./globals.css"
 import { useEffect } from "react";
-import Userinfo from "@/components/Userinfo";
 import { useAuthContext } from "@/context/useAuthContext";
 import Header from "@/components/Header";
 import Link from "next/link";
