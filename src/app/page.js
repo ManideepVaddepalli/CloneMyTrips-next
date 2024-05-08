@@ -39,7 +39,7 @@ export default function Page() {
     </div>
   </div>)
   }
-  const linkvar=""
+  const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
     return(<><Header></Header><div className="insta-container"> 
       <p>This app cant be displayed in instagram</p>
       <h6>Click on below button</h6>
