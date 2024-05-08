@@ -14,7 +14,7 @@ export default function Page() {
   const [datavar,useDatavar]=useState("")
  
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
-    const linkvar="https://clone-my-trips.vercel.app/"
+    const linkvar="https://clone-my-trips-next.vercel.app/"
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=>{
       document.getElementById("clicklink").click()

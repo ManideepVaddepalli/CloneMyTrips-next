@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Link from "next/link";
 //react-device-detect lib
 import { browserName } from "react-device-detect";
+import Script from "next/script";
 
 
 export default function Page() {
@@ -15,13 +16,13 @@ export default function Page() {
   
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
     if (browserName.includes("instagram") || browserName.includes("Instagram")){
-      const linkvar="https://clone-my-trips.vercel.app/"
+      const linkvar="https://clone-my-trips-next.vercel.app/"
       // eslint-disable-next-line react-hooks/rules-of-hooks
       useEffect(()=>{
         document.getElementById("clicklink").click()
       },[])
       return(<div className="insta-container"> 
-        <p>This app can't be displayed in instagram</p>
+        <p>This app cant be displayed in instagram</p>
         <h6>Click on below button</h6>
         <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
         </div>)
@@ -45,6 +46,7 @@ export default function Page() {
       </div>
       }
     </div>
-  </div>)
-    }
+  </div>
+  )
+}
   }}
