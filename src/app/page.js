@@ -18,16 +18,16 @@ export default function Page() {
       if(linkelem){
         linkelem.click()
       }
-      const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
-      return(<><Header></Header><div className="insta-container"> 
-        <p>This app cant be displayed in instagram</p>
-        <h6>Click on below button</h6>
-        <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
-        </div></>)
-    
     }
   },[])
-  if (!browserName.includes("instagram") || !browserName.includes("Instagram")){
+  if (browserName.includes("instagram") || browserName.includes("Instagram")){
+    const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
+    return(<><Header></Header><div className="insta-container"> 
+      <p>This app cant be displayed in instagram</p>
+      <h6>Click on below button</h6>
+      <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
+      </div></>)
+  }
   return(<div className="homepage-container">
     <Header></Header>
     <div className="main-content-container">
@@ -47,7 +47,7 @@ export default function Page() {
       }
     </div>
   </div>)
-  }}
+  }
 
 
   
