@@ -12,15 +12,15 @@ export default function Page() {
   const router=useRouter()
   const {dispatch} = useAuthContext()
   const [datavar,useDatavar]=useState("")
-  useEffect(()=>{
-    if (browserName.includes("instagram") || browserName.includes("Instagram")){
+ 
+  if (browserName.includes("instagram") || browserName.includes("Instagram")){
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(()=>{
       const linkelem = document.getElementById("clicklink")
       if(linkelem){
         linkelem.click()
       }
-    }
   },[])
-  if (browserName.includes("instagram") || browserName.includes("Instagram")){
     const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
       return(<><Header></Header><div className="insta-container"> 
         <p>This app cant be displayed in instagram</p>
