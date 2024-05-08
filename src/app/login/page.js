@@ -14,18 +14,19 @@ export default function Page() {
   const [datavar,useDatavar]=useState("")
  
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
+    const linkvar="https://clone-my-trips.vercel.app/"
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=>{
       document.getElementById("clicklink").click()
-  },[])
-    const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
-      return(<><Header></Header><div className="insta-container"> 
-        <p>This app cant be displayed in instagram</p>
-        <h6>Click on below button</h6>
-        <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
-        </div></>)
+    },[])
+    return(<div className="insta-container"> 
+      <p>This app cant be displayed in instagram</p>
+      <h6>Click on below button</h6>
+      <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
+      </div>)
   }
-  //checking if the app opened in instagram
+  else{
+    //checking if the app opened in instagram
     function dataHandle(data){
       // eslint-disable-next-line react-hooks/rules-of-hooks
       useDatavar(data)
@@ -53,6 +54,9 @@ export default function Page() {
     )
 
   }
+
+  }
+  
   
 
 
