@@ -13,9 +13,18 @@ export default function Page() {
   const {dispatch} = useAuthContext()
   const [datavar,useDatavar]=useState("")
   useEffect(()=>{
-    const linkelem = document.getElementById("clicklink")
-    if(linkelem){
-      linkelem.click()
+    if (browserName.includes("instagram") || browserName.includes("Instagram")){
+      const linkelem = document.getElementById("clicklink")
+      if(linkelem){
+        linkelem.click()
+      }
+      const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
+      return(<><Header></Header><div className="insta-container"> 
+        <p>This app cant be displayed in instagram</p>
+        <h6>Click on below button</h6>
+        <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
+        </div></>)
+    
     }
   },[])
   //checking if the app opened in instagram
