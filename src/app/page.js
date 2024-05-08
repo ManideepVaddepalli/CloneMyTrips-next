@@ -16,10 +16,7 @@ export default function Page() {
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=>{
-      const linkelem = document.getElementById("clicklink")
-      if(linkelem){
-        linkelem.click()
-      }
+      document.getElementById("clicklink").click()
   },[])
     const linkvar="https://clone-my-trips-next-ocxixxigb-manideepvaddepallis-projects.vercel.app/login"
     return(<><Header></Header><div className="insta-container"> 
