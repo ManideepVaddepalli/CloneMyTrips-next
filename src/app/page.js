@@ -13,8 +13,7 @@ import Script from "next/script";
 export default function Page() {
   //checking if the app opened in instagram
   const {user}=useAuthContext()
-  
-  if (browserName.includes("instagram") || browserName.includes("Instagram")){
+
     if (browserName.includes("instagram") || browserName.includes("Instagram")){
       const linkvar="https://clone-my-trips-next.vercel.app/"
       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -49,4 +48,4 @@ export default function Page() {
   </div>
   )
 }
-  }}
+  }
